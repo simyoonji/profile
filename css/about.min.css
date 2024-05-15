@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+@font-face {
+  font-family: "KCC-Ganpan";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font-size: 10px;
+  font-family: "KCC-Ganpan";
+}
+
+body {
+  overflow: hidden;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+em {
+  font-style: normal;
+}
+
+span {
+  display: inline-block;
+}
+
+dt {
+  font-size: 2rem;
+}
+
+dd {
+  font-size: 1.8rem;
+}
+
+::-webkit-scrollbar {
+  background-color: #1c1c1b;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 119, 0);
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes letter {
+  0% {
+    letter-spacing: 0rem;
+  }
+  100% {
+    letter-spacing: 0.3rem;
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu ul li {
+  position: relative;
+  margin: 0 2rem;
+  text-align: center;
+}
+.menu ul li:hover a {
+  font-size: 3.5rem;
+}
+.menu ul li a {
+  line-height: 25rem;
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 3rem;
+  text-transform: uppercase;
+  background-color: rgb(255, 119, 0);
+  transition: font 0.1s ease-in;
+  z-index: 5;
+}
+.menu ul li a::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: -6rem;
+  transform: translateX(-50%);
+  width: 8rem;
+  height: 9rem;
+  background-image: url(../img/menu-img-1.png);
+  background-position: center center;
+  background-size: contain;
+}
+
+body {
+  overflow-y: inherit;
+  overflow-x: hidden;
+  background-color: #1c1c1b;
+}
+
+.about-main {
+  padding: 5rem;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.about-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  padding: 9rem 12rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border-radius: 3rem;
+  background-color: #fff;
+  overflow: hidden;
+}
+.about-content h2 {
+  display: inline-block;
+  font-size: 3rem;
+  white-space: nowrap;
+  transition: color 0.2s ease-in;
+}
+.about-content h2:hover {
+  color: rgb(255, 119, 0);
+}
+.about-content h2:hover em {
+  color: #1c1c1b;
+}
+.about-content h2 em {
+  position: relative;
+  color: rgb(255, 119, 0);
+  transition: color 0.2s ease-in;
+}
+.about-content h2 em::before {
+  content: ":)";
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: -1rem;
+  transform: translateX(-50%) rotate(90deg);
+  font-size: 2rem;
+}
+.about-content dl {
+  width: 65%;
+  font-size: 2rem;
+  word-break: break-all;
+}
+.about-content dl dt {
+  padding: 0.5rem 1rem;
+  margin: 4rem 0 3rem 0;
+  box-sizing: border-box;
+  font-weight: 600;
+  display: inline-block;
+  background-color: #7DD786;
+}
+.about-content dl dd {
+  line-height: 3rem;
+  font-size: 1.8rem;
+  color: #666666;
+}
+.about-img figure {
+  position: relative;
+  width: 30rem;
+  overflow: hidden;
+  border: 2rem solid rgb(255, 119, 0);
+  animation: opacity 1s ease-in forwards;
+}
+.about-img figure:hover img {
+  transform: scale(1.2);
+}
+.about-img figure figcaption {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  border: 0 !important;
+}
+.about-img figure img {
+  width: 100%;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}

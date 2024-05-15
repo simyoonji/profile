@@ -1,0 +1,24 @@
+@keyframes circle {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes letter {
+    0% {
+        letter-spacing: 0rem;
+    }
+    100% {
+        letter-spacing: .3rem;
+    }
+}
+@keyframes opacity {
+    0% {
+       opacity: 0;
+    }
+    100% {
+       opacity: 1;
+    }
+}

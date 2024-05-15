@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+@font-face {
+  font-family: "KCC-Ganpan";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font-size: 10px;
+  font-family: "KCC-Ganpan";
+}
+
+body {
+  overflow: hidden;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+em {
+  font-style: normal;
+}
+
+span {
+  display: inline-block;
+}
+
+dt {
+  font-size: 2rem;
+}
+
+dd {
+  font-size: 1.8rem;
+}
+
+::-webkit-scrollbar {
+  background-color: #1c1c1b;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 119, 0);
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes letter {
+  0% {
+    letter-spacing: 0rem;
+  }
+  100% {
+    letter-spacing: 0.3rem;
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.main {
+  height: 100vh;
+  background-color: #1c1c1b;
+}
+.main-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 124rem;
+  height: 100%;
+  margin: 0 auto;
+}
+.main-inner nav {
+  display: flex;
+  justify-content: center;
+}
+.main-inner nav input {
+  display: none;
+}
+.main-inner nav input:checked + label {
+  border: 0.1rem solid #fff;
+  background-color: transparent;
+}
+.main-inner nav input:checked ~ .bg {
+  transform: scale(80);
+  -webkit-transform: scale(80);
+  -moz-transform: scale(80);
+  -o-transform: scale(80);
+}
+.main-inner nav input:checked ~ .menu {
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+}
+.main-inner nav label {
+  position: relative;
+  padding: 20rem;
+  border-radius: 50%;
+  background-image: url(../img/main-img-1.png);
+  background-position: center center;
+  background-size: cover;
+  background-color: rgb(255, 119, 0);
+  cursor: pointer;
+  animation: circle 10s linear alternate infinite;
+  z-index: 1000;
+}
+.main-inner nav label::after {
+  content: "click :)";
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #1c1c1b;
+  font-size: 2.5rem;
+  font-style: italic;
+}
+.main-inner nav .bg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8rem;
+  height: 8rem;
+  border-radius: 8rem;
+  background-image: radial-gradient(rgb(255, 119, 0), #fff);
+  transition: transform 0.7s ease-in;
+  -webkit-transition: transform 0.7s ease-in;
+  -moz-transition: transform 0.7s ease-in;
+  -o-transition: transform 0.7s ease-in;
+  z-index: 98;
+}
+.main-inner nav .menu {
+  position: fixed;
+  left: 8%;
+  top: -120%;
+  transition: top 0.8s ease-in;
+  -webkit-transition: top 0.8s ease-in;
+  -moz-transition: top 0.8s ease-in;
+  -o-transition: top 0.8s ease-in;
+  opacity: 0;
+  z-index: 100;
+}
+.main-inner nav .menu ul {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+.main-inner nav .menu ul li {
+  margin: 0 0 3rem 0;
+}
+.main-inner nav .menu ul li:hover {
+  animation: letter 1s ease-in alternate infinite;
+}
+.main-inner nav .menu ul li:hover a {
+  text-decoration: underline;
+}
+.main-inner nav .menu ul li a {
+  font-size: 4rem;
+}

@@ -1,0 +1,39 @@
+html {
+    font : {
+        size: 10px;
+        family: 'KCC-Ganpan';
+    }
+}
+body {
+    overflow: hidden;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+em {
+    font-style: normal;
+}
+span {
+    display: inline-block;
+}
+dt {
+    font-size: 2rem;
+}
+dd {
+    font-size: 1.8rem;
+}
+::-webkit-scrollbar {
+    background-color: #1c1c1b;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 119, 0);
+}

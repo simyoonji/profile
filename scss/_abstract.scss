@@ -1,0 +1,21 @@
+@mixin positionAb(){
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+@mixin visually-hidden(){
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    border: 0 !important;
+}
+
+// variables 
+$color-primary: rgb(255, 119, 0);
+$color-black: #1c1c1b;
+$color-white: #fff;
