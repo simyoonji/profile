@@ -14,36 +14,72 @@ body {
 }
 .about {
     &-main {
-        padding: 10rem 0rem;
+        padding: 10rem 5rem;
         box-sizing: border-box;
+        transition: padding .2s ease-in;
+        -webkit-transition: padding .2s ease-in;
+        -moz-transition: padding .2s ease-in;
+        -o-transition: padding .2s ease-in;
+
+        @include mq('1200') {
+            padding: 5rem;
+        }
+        @include mq('980') {
+            padding: 2rem;
+        }
     }
 
     &-inner {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 85%;
-        padding: 9rem 12rem;
+        padding: 9rem;
         margin: 0 auto;
         box-sizing: border-box;
         border-radius: 3rem;
         background-color: $color-white;
+        transition: padding .2s ease-in;
+        -webkit-transition: padding .2s ease-in;
+        -moz-transition: padding .2s ease-in;
+        -o-transition: padding .2s ease-in;
         overflow: hidden;
-    }
-    &-content {
+
+        @include mq('1200') {
+            padding: 5rem;
+        }
+        @include mq('980') {
+            padding: 3rem;
+        }
+
         h2 {
-            display: inline-block;
             font-size: 3rem;
             white-space: nowrap;
             transition: color .2s ease-in;
-            -webkit-transition: color .2s ease-in;
-            -moz-transition: color .2s ease-in;
-            -o-transition: color .2s ease-in;
+            -webkit-transition: color .2s ease-in, font-size .2s ease;
+            -moz-transition: color .2s ease-in, font-size .2s ease;
+            -o-transition: color .2s ease-in, font-size .2s ease;
+
+            @include mq('1200') {
+                font-size: 2.5rem;
+            }
+            @include mq('980') {
+                font-size: 2rem;
+            }
+            @include mq('767') {
+                line-height: 3.3rem;
+                font-size: 1.8rem;
+                text-align: center;
+            }
 
             &:hover {
                 color: $color-primary;
                 em {
                     color: $color-black;
+                }
+            }
+
+            br {
+                display: none;
+
+                @include mq('767') {
+                    display: block;
                 }
             }
 
@@ -67,58 +103,135 @@ body {
                     -moz-transform: translateX(-50%) rotate(90deg);
                     -o-transform: translateX(-50%) rotate(90deg);
                     font-size: 2rem;
+
+                    @include mq('1200') {
+                        top: -1.3rem;
+                        font-size: 1.8rem;
+                    }
+                    @include mq('767') {
+                        top: -1.5rem;
+                        font-size: 1.4rem;
+                    }
                 }
             }
         }
+    }
+
+    &-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include mq('767') {
+            flex-direction: column-reverse;
+        }
+    }
+    
+    &-txt {
+        
         dl {
-            width: 65%;
+            width: 70%;
             font-size: 2rem;
-            word-break: break-all;
+            transition: width .2s ease;
+            -webkit-transition: width .2s ease;
+            -moz-transition: width .2s ease;
+            -o-transition: width .2s ease;
+
+            @include mq('1200') {
+                width: 80%;
+            }
+            @include mq('980') {
+                width: 90%;
+            }
+            @include mq('767') {
+                width: 100%;
+                margin: 0 auto;
+            }
 
             dt {
+                display: inline-block;
                 padding: .5rem 1rem;
                 margin: 4rem 0 3rem 0;
                 box-sizing: border-box;
                 font-weight: 600;
-                display: inline-block;
                 background-color: #7DD786;
+                transition: font-size .2s ease-in;
+                -webkit-transition: font-size .2s ease-in;
+                -moz-transition: font-size .2s ease-in;
+                -o-transition: font-size .2s ease-in;
+
+                @include mq('1026') {
+                    font-size: 1.8rem;
+                }
+                @include mq('767') {
+                    font-size: 1.6rem;
+                }
+                @include mq('480') {
+                    display: block;
+                    text-align: center;
+                }
             }
             dd {
                 line-height: 3rem;
-                font-size: 1.8rem;
+                transition: font-size .2s ease-in;
+                -webkit-transition: font-size .2s ease-in;
+                -moz-transition: font-size .2s ease-in;
+                -o-transition: font-size .2s ease-in;
+
+                @include mq('1026') {
+                    font-size: 1.6rem;
+                }
+                @include mq('767') {
+                    line-height: 2rem;
+                    font-size: 1.4rem;
+                }
+                @include mq('480') {
+                    line-height: 2.5rem;
+                }
             }
         }
     }
+
     &-img {
+        height: 100%;
+
+        @include mq('767') {
+            padding: 2rem 0;
+            box-sizing: border-box;
+        }
+
         figure {
             position: relative;
-            width: 30rem;
-            overflow: hidden;  
-            border: 2rem solid $color-primary;
+            width: 35rem;
             animation: opacity 1s ease-in forwards;
+            transition: width .2s ease;
+            -webkit-transition : width .2s ease;
+            -moz-transition : width .2s ease;
+            -o-transition : width .2s ease;
+            overflow: hidden;  
+
+            @include mq('1200') {
+                width: 30rem;
+            }
+            @include mq('980') {
+                width: 20rem;
+            }
 
             &:hover {
                 img {
-                    transform: scale(1.2);
+                    transform: scale(1.1);
                 }
             }          
-
             figcaption {
                @include visually-hidden();
             }
 
             img {
                 width: 100%;
-                transform: scale(1.1);
-                -webkit-transform: scale(1.1);
-                -ms-transform: scale(1.1);
-                -moz-transform: scale(1.1);
-                -o-transform: scale(1.1);
                 transition: transform .3s ease;
                 -webkit-transition: transform .3s ease;
                 -moz-transition: transform .3s ease;
                 -o-transition: transform .3s ease;
-                
             }
         }
     }

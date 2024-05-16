@@ -1,6 +1,7 @@
 .main {
     height: 100vh;
     background-color: $color-black;
+    overflow: hidden;
 
     &-inner {
         display: flex;
@@ -12,6 +13,7 @@
 
         nav {
             display: flex;
+            align-items: center;
             justify-content: center;
 
             input {
@@ -28,8 +30,6 @@
                     -o-transform: scale(80);
                 }
                 &:checked~.menu {
-                    top: 50%;
-                    transform: translateY(-50%);
                     opacity: 1;
                 }
             }
@@ -44,8 +44,19 @@
                     color: $color-primary;
                 };
                 cursor: pointer;
+                transition: padding .2s ease;
                 animation: circle 10s linear alternate infinite;
                 z-index: 1000;
+
+                @include mq('980') {
+                    padding: 15rem;
+                }
+                @include mq('980') {
+                    padding: 10rem;
+                }
+                @include mq('480') {
+                    padding: 8rem;
+                }
 
                 &::after {
                     content: 'click :)';
@@ -55,6 +66,14 @@
                     font : {
                         size: 2.5rem;
                         style: italic;
+                    }
+                    transition: font-size .2s ease;
+                    -webkit-transition:  font-size .2s ease;
+                    -moz-transition:  font-size .2s ease;
+                    -o-transition:  font-size .2s ease;
+
+                    @include mq('980') {
+                       font-size: 1.5rem;
                     }
                 }
             }
@@ -78,23 +97,42 @@
             }
             .menu {
                 position: fixed;
-                left: 8%;
-                top: -120%;
-                transition: top .8s ease-in;
-                -webkit-transition: top .8s ease-in;
-                -moz-transition: top .8s ease-in;
-                -o-transition: top .8s ease-in;
+                left: 20%;
+                top: 50%;
+                transform: translateY(-50%);
+                -webkit-transform:translateY(-50%);
+                -ms-transform:translateY(-50%);
+                -moz-transform:translateY(-50%);
+                -o-transform:translateY(-50%);
+                transition: left .2s ease;
+                -webkit-transition: left .2s ease;
+                -moz-transition: left .2s ease;
+                -o-transition: left .2s ease;
                 opacity: 0;
                 z-index: 100;
+
+                @include mq('1200') {
+                    left: 15%;
+                }
+                @include mq('980') {
+                    left: 10%;
+                }
+                @include mq('480') {
+                    left: 5%;
+                }
+                @include mq('480') {
+                    left: 4%;
+                }
 
                 ul {
                     display: flex;
                     flex-direction: column;
+                    gap: 3rem;
                     text-transform: uppercase;
-                    
+                    @include mq('480') {
+                        gap: 2rem;
+                    }
                     li {
-                        margin: 0 0 3rem 0;
-
                         &:hover {
                                 animation: letter 1s ease-in alternate infinite;
                             a {
@@ -103,6 +141,23 @@
                         }
                         a {
                             font-size: 4rem;
+                            transition: font-size .2s ease;
+                            -webkit-transition:  font-size .2s ease;
+                            -moz-transition:  font-size .2s ease;
+                            -o-transition:  font-size .2s ease;
+
+                            @include mq('1200') {
+                                font-size: 3rem;
+                            }
+                            @include mq('980') {
+                                font-size: 2rem;
+                            }
+                            @include mq('480') {
+                                font-size: 1.8rem;
+                            }
+                            @include mq('380') {
+                                font-size: 1.4rem;
+                            }
                         }
                     }
                 }

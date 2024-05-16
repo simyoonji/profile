@@ -19,3 +19,55 @@
 $color-primary: rgb(255, 119, 0);
 $color-black: #1c1c1b;
 $color-white: #fff;
+
+/* media */
+@mixin mq($screen-width) {
+    @if $screen-width == "1200" {
+        /* desktop */
+        @media screen and (max-width:1200px){ 
+            @content;
+        }
+    }   
+    @else if $screen-width == "1026" {
+        /* tablet */
+        @media screen and (max-width:1026px){
+            @content;
+        }
+    } 
+    @else if $screen-width == "980" {
+        /* tablet */
+        @media screen and (max-width:980px){
+            @content;
+        }
+    }
+    @else if $screen-width == "767" {
+        /* mobile */
+        @media screen and (max-width:767px){
+            @content;
+        }
+    }
+    @else if $screen-width == "600" {
+        /* mobile */
+        @media screen and (max-width:600px){
+            @content;
+        }
+    }
+    @else if $screen-width == "480" {
+        /* mobile */
+        @media screen and (max-width:480px){
+            @content;
+        }
+    }
+    @else if $screen-width == "380" {
+        /* mobile */
+        @media screen and (max-width:380px){
+            @content;
+        }
+    }
+        /* 최소크기 */
+    @else if $screen-width == "320" {
+        @media screen and (max-width:320px){
+            @content;
+        }
+    }
+}

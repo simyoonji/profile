@@ -54,6 +54,7 @@ dd {
   background-color: rgb(255, 119, 0);
 }
 
+/* media */
 @keyframes circle {
   0% {
     transform: rotate(0);
@@ -78,6 +79,7 @@ dd {
     opacity: 1;
   }
 }
+/* media */
 .menu {
   display: flex;
   align-items: center;
@@ -94,14 +96,45 @@ dd {
 .menu ul li {
   position: relative;
   transform: translateY(-30%);
+  -webkit-transform: translateY(-30%);
+  -moz-transform: translateY(-30%);
+  -ms-transform: translateY(-30%);
+  -o-transform: translateY(-30%);
   margin: 0 2rem;
+  font-family: "KCC-Ganpan";
   text-align: center;
   opacity: 0;
   transition: opacity 1s ease-in, transform 1s ease-in;
-  font-family: "KCC-Ganpan";
+  -webkit-transition: opacity 1s ease-in, transform 1s ease-in;
+  -moz-transition: opacity 1s ease-in, transform 1s ease-in;
+  -o-transition: opacity 1s ease-in, transform 1s ease-in;
+  /* mobile */
+  /* mobile */
+}
+@media screen and (max-width: 767px) {
+  .menu ul li {
+    margin: 0 1rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .menu ul li {
+    margin: 0 0.5rem;
+  }
 }
 .menu ul li:hover a {
   font-size: 3.5rem;
+  /* desktop */
+  /* mobile */
+}
+@media screen and (max-width: 1200px) {
+  .menu ul li:hover a {
+    font-size: 2.2rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .menu ul li:hover a {
+    font-size: 1.5rem;
+  }
 }
 .menu ul li a {
   line-height: 25rem;
@@ -112,11 +145,38 @@ dd {
   font-size: 3rem;
   text-transform: uppercase;
   background-color: rgb(255, 119, 0);
-  transition: font 0.1s ease-in;
-  -webkit-transition: font 0.1s ease-in;
-  -moz-transition: font 0.1s ease-in;
-  -o-transition: font 0.1s ease-in;
+  transition: 0.1s ease-in;
+  -webkit-transition: 0.1s ease-in;
+  -moz-transition: 0.1s ease-in;
+  -o-transition: 0.1s ease-in;
   z-index: 5;
+  /* desktop */
+  /* mobile */
+  /* mobile */
+}
+@media screen and (max-width: 1200px) {
+  .menu ul li a {
+    line-height: 20rem;
+    width: 20rem;
+    height: 20rem;
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .menu ul li a {
+    line-height: 10rem;
+    width: 10rem;
+    height: 10rem;
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .menu ul li a {
+    line-height: 8rem;
+    width: 8rem;
+    height: 8rem;
+    font-size: 1.2rem;
+  }
 }
 .menu ul li a::after {
   content: "";
@@ -125,43 +185,83 @@ dd {
   left: 50%;
   top: -6rem;
   transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
   width: 8rem;
   height: 9rem;
   background-image: url(../img/menu-img-1.png);
   background-position: center center;
   background-size: contain;
+  /* mobile */
+}
+@media screen and (max-width: 767px) {
+  .menu ul li a::after {
+    top: -3rem;
+    width: 4rem;
+    height: 5rem;
+  }
 }
 
 body {
-  overflow-y: inherit;
+  overflow-y: scroll;
   overflow-x: hidden;
   background-color: #1c1c1b;
 }
 
 #container {
   padding: 5rem;
+  margin: 0 auto;
   box-sizing: border-box;
   font-family: "Noto Sans KR", sans-serif;
+  transition: padding 0.2s ease;
+  -webkit-transition: padding 0.2s ease;
+  -moz-transition: padding 0.2s ease;
+  -o-transition: padding 0.2s ease;
+  /* mobile */
+}
+@media screen and (max-width: 767px) {
+  #container {
+    padding: 2rem;
+  }
 }
 
 .skills-main {
   padding: 5rem 0 0 0;
+  margin: 0 auto;
+  transition: padding 0.2s ease;
+  -webkit-transition: padding 0.2s ease;
+  -moz-transition: padding 0.2s ease;
+  -o-transition: padding 0.2s ease;
+  /* mobile */
+}
+@media screen and (max-width: 767px) {
+  .skills-main {
+    padding: 2rem 0 0 0;
+  }
 }
 .skills-inner {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  row-gap: 5rem;
+  display: block;
 }
 .skills-inner dl {
   width: 60%;
   padding: 5rem;
-  margin: 0 auto;
+  margin: 0 auto 5rem;
+  box-sizing: border-box;
   border-radius: 3rem;
   background-color: #fff;
-  transition: transform 0.2s ease, box-shadow 0.7s ease;
-  -webkit-transition: transform 0.2s ease, box-shadow 0.7s ease;
-  -moz-transition: transform 0.2s ease, box-shadow 0.7s ease;
-  -o-transition: transform 0.2s ease, box-shadow 0.7s ease;
+  transition: 0.2s ease;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  /* tablet */
+}
+@media screen and (max-width: 980px) {
+  .skills-inner dl {
+    width: 100%;
+    padding: 2rem;
+  }
 }
 .skills-inner dl:hover {
   transform: translate(-1%, -1%);
@@ -178,20 +278,60 @@ body {
   font-size: 3rem;
   font-family: "KCC-Ganpan";
   text-transform: uppercase;
+  -webkit-transition: font-size 0.2s ease;
+  -moz-transition: font-size 0.2s ease;
+  -o-transition: font-size 0.2s ease;
+  /* mobile */
+  /* mobile */
+}
+@media screen and (max-width: 767px) {
+  .skills-inner dl dt {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .skills-inner dl dt {
+    font-size: 2rem;
+  }
 }
 .skills-inner dl dd {
-  padding: 1rem 0;
+  position: relative;
+  padding: 2rem 0 0 5rem;
   box-sizing: border-box;
   font-size: 2rem;
   text-align: start;
+  transition: font-size 0.2s ease;
+  -webkit-transition: font-size 0.2s ease;
+  -moz-transition: font-size 0.2s ease;
+  -o-transition: font-size 0.2s ease;
+  /* tablet */
+  /* mobile */
+  /* mobile */
+}
+@media screen and (max-width: 1026px) {
+  .skills-inner dl dd {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .skills-inner dl dd {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .skills-inner dl dd {
+    font-size: 1.4rem;
+  }
 }
 .skills-inner dl dd em {
   font-weight: 600;
 }
 .skills-inner dl dd::before {
   display: inline-block;
+  position: absolute;
+  left: 0;
   padding: 0.1rem 0.5rem;
-  margin: 0 1rem 0 0;
   box-sizing: border-box;
   border-radius: 0.5rem;
   color: #1c1c1b;

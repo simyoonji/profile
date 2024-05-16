@@ -1,3 +1,5 @@
+@import 'abstract';
+
 .menu {
     display: flex;
     align-items: center;
@@ -27,9 +29,23 @@
             -moz-transition: opacity 1s ease-in, transform 1s ease-in;
             -o-transition: opacity 1s ease-in, transform 1s ease-in;
 
+            @include mq('767') {
+                margin: 0 1rem;
+            }
+            @include mq('767') {
+                margin: 0 .5rem;
+            }
+
             &:hover {
                 a {
                     font-size: 3.5rem;
+
+                    @include mq('1200') {
+                        font-size: 2.2rem;
+                    }
+                    @include mq('767') {
+                        font-size: 1.5rem;
+                    }
                 }
             }
             a {
@@ -37,16 +53,35 @@
                 width: 25rem;
                 height: 25rem;
                 border-radius: 50%;
-                color: #fff;
+                color: $color-white;
                 font-size: 3rem;
                 text-transform: uppercase;
-                background-color: rgb(255, 119, 0);
-                transition: font .1s ease-in;
-                -webkit-transition: font .1s ease-in;
-                -moz-transition: font .1s ease-in;
-                -o-transition: font .1s ease-in;
+                background-color: $color-primary;
+                transition: .1s ease-in;
+                -webkit-transition: .1s ease-in;
+                -moz-transition: .1s ease-in;
+                -o-transition: .1s ease-in;
                 z-index: 5;
-                
+                    
+                @include mq('1200') {
+                    line-height: 20rem;
+                    width: 20rem;
+                    height: 20rem;
+                    font-size: 2rem;
+                }
+                @include mq('767') {
+                    line-height: 10rem;
+                    width: 10rem;
+                    height: 10rem;
+                    font-size: 1.4rem;
+                }
+                @include mq('480') {
+                    line-height: 8rem;
+                    width: 8rem;
+                    height: 8rem;
+                    font-size: 1.2rem;
+                }
+                    
                 &::after {
                     content: '';
                     display: inline-block;
@@ -65,6 +100,12 @@
                         position: center center;
                         size: contain; 
                     };
+
+                    @include mq('767') {
+                        top: -3rem;
+                        width: 4rem;
+                        height: 5rem;
+                    }
                 }
             }
         }
