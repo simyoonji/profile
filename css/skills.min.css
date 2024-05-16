@@ -42,6 +42,7 @@ dt {
 }
 
 dd {
+  color: #666666;
   font-size: 1.8rem;
 }
 
@@ -92,8 +93,12 @@ dd {
 }
 .menu ul li {
   position: relative;
+  transform: translateY(-30%);
   margin: 0 2rem;
   text-align: center;
+  opacity: 0;
+  transition: opacity 1s ease-in, transform 1s ease-in;
+  font-family: "KCC-Ganpan";
 }
 .menu ul li:hover a {
   font-size: 3.5rem;
@@ -108,6 +113,9 @@ dd {
   text-transform: uppercase;
   background-color: rgb(255, 119, 0);
   transition: font 0.1s ease-in;
+  -webkit-transition: font 0.1s ease-in;
+  -moz-transition: font 0.1s ease-in;
+  -o-transition: font 0.1s ease-in;
   z-index: 5;
 }
 .menu ul li a::after {
@@ -130,8 +138,75 @@ body {
   background-color: #1c1c1b;
 }
 
+#container {
+  padding: 5rem;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
 .skills-main {
-  width: 100%;
-  height: 100vh;
-  color: #fff;
+  padding: 5rem 0 0 0;
+}
+.skills-inner {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 5rem;
+}
+.skills-inner dl {
+  width: 60%;
+  padding: 5rem;
+  margin: 0 auto;
+  border-radius: 3rem;
+  background-color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.7s ease;
+  -webkit-transition: transform 0.2s ease, box-shadow 0.7s ease;
+  -moz-transition: transform 0.2s ease, box-shadow 0.7s ease;
+  -o-transition: transform 0.2s ease, box-shadow 0.7s ease;
+}
+.skills-inner dl:hover {
+  transform: translate(-1%, -1%);
+  -webkit-transform: translate(-1%, -1%);
+  -ms-transform: translate(-1%, -1%);
+  -moz-transform: translate(-1%, -1%);
+  -o-transform: translate(-1%, -1%);
+  box-shadow: 0.7rem 0.7rem 0 0 rgb(255, 119, 0);
+}
+.skills-inner dl dt {
+  padding: 0 0 1rem 0;
+  box-sizing: border-box;
+  color: rgb(255, 119, 0);
+  font-size: 3rem;
+  font-family: "KCC-Ganpan";
+  text-transform: uppercase;
+}
+.skills-inner dl dd {
+  padding: 1rem 0;
+  box-sizing: border-box;
+  font-size: 2rem;
+  text-align: start;
+}
+.skills-inner dl dd em {
+  font-weight: 600;
+}
+.skills-inner dl dd::before {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  margin: 0 1rem 0 0;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  color: #1c1c1b;
+  font-weight: 600;
+  background-color: #7DD786;
+}
+.skills-inner dl dd:nth-of-type(1):before {
+  content: "01";
+}
+.skills-inner dl dd:nth-of-type(2):before {
+  content: "02";
+}
+.skills-inner dl dd:nth-of-type(3):before {
+  content: "03";
+}
+.skills-inner dl dd:nth-of-type(4):before {
+  content: "04";
 }

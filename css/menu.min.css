@@ -13,8 +13,19 @@
 }
 .menu ul li {
   position: relative;
+  transform: translateY(-30%);
+  -webkit-transform: translateY(-30%);
+  -moz-transform: translateY(-30%);
+  -ms-transform: translateY(-30%);
+  -o-transform: translateY(-30%);
   margin: 0 2rem;
+  font-family: "KCC-Ganpan";
   text-align: center;
+  opacity: 0;
+  transition: opacity 1s ease-in, transform 1s ease-in;
+  -webkit-transition: opacity 1s ease-in, transform 1s ease-in;
+  -moz-transition: opacity 1s ease-in, transform 1s ease-in;
+  -o-transition: opacity 1s ease-in, transform 1s ease-in;
 }
 .menu ul li:hover a {
   font-size: 3.5rem;
@@ -29,6 +40,9 @@
   text-transform: uppercase;
   background-color: rgb(255, 119, 0);
   transition: font 0.1s ease-in;
+  -webkit-transition: font 0.1s ease-in;
+  -moz-transition: font 0.1s ease-in;
+  -o-transition: font 0.1s ease-in;
   z-index: 5;
 }
 .menu ul li a::after {
@@ -38,6 +52,10 @@
   left: 50%;
   top: -6rem;
   transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
   width: 8rem;
   height: 9rem;
   background-image: url(../img/menu-img-1.png);
