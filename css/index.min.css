@@ -79,6 +79,10 @@ dd {
     opacity: 1;
   }
 }
+html {
+  overflow: hidden;
+}
+
 .main {
   height: 100vh;
   background-color: #1c1c1b;
@@ -91,6 +95,7 @@ dd {
   max-width: 124rem;
   height: 100%;
   margin: 0 auto;
+  overflow: hidden;
 }
 .main-inner nav {
   display: flex;
@@ -114,7 +119,7 @@ dd {
   opacity: 1;
 }
 .main-inner nav label {
-  position: relative;
+  position: fixed;
   padding: 20rem;
   border-radius: 50%;
   background-image: url(../img/main-img-1.png);
@@ -166,7 +171,7 @@ dd {
   }
 }
 .main-inner nav .bg {
-  position: absolute;
+  position: fixed;
   top: 50%;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);

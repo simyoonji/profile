@@ -1,3 +1,6 @@
+html {
+    overflow: hidden;
+}
 .main {
     height: 100vh;
     background-color: $color-black;
@@ -10,6 +13,7 @@
         max-width: 124rem;
         height: 100%;
         margin: 0 auto;
+        overflow: hidden;
 
         nav {
             display: flex;
@@ -34,7 +38,7 @@
                 }
             }
             label {
-                position: relative;
+                position: fixed;
                 padding: 20rem;
                 border-radius: 50%;
                 background: {
@@ -78,7 +82,7 @@
                 }
             }
             .bg {
-                position: absolute;
+                position: fixed;
                 top: 50%;
                 transform: translateY(-50%);
                 -webkit-transform:translateY(-50%);
