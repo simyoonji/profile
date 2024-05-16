@@ -32,7 +32,7 @@
             @include mq('767') {
                 margin: 0 1rem;
             }
-            @include mq('767') {
+            @include mq('480') {
                 margin: 0 .5rem;
             }
 
@@ -45,6 +45,9 @@
                     }
                     @include mq('767') {
                         font-size: 1.5rem;
+                    }
+                    @include mq('480') {
+                        font-size: 1.3rem;
                     }
                 }
             }
