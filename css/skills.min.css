@@ -116,7 +116,7 @@ dd {
     margin: 0 1rem;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
   .menu ul li {
     margin: 0 0.5rem;
   }
@@ -124,6 +124,7 @@ dd {
 .menu ul li:hover a {
   font-size: 3.5rem;
   /* desktop */
+  /* mobile */
   /* mobile */
 }
 @media screen and (max-width: 1200px) {
@@ -134,6 +135,11 @@ dd {
 @media screen and (max-width: 767px) {
   .menu ul li:hover a {
     font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .menu ul li:hover a {
+    font-size: 1.3rem;
   }
 }
 .menu ul li a {
